@@ -1,6 +1,6 @@
 # Photo & Camera Tour
 
-A small Expo + React Native project for learning the camera, photo picker, image manipulation, and device photo-library basics. The app is a single screen with local React state and a few small photo-service functions.
+A small Expo + React Native project for learning the camera, photo picker, image manipulation, and device photo-library basics. The app is a single screen with local React state and a few small photo-service functions. 
 
 ## Instructor and student guide
 
