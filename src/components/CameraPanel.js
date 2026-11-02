@@ -1,9 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-/*
 import { CameraView, useCameraPermissions } from 'expo-camera';
-*/
 
 // ======================================================
 // PART 3 — SHOW THE LIVE CAMERA
@@ -15,8 +13,7 @@ import { CameraView, useCameraPermissions } from 'expo-camera';
 // NEXT: Search for "PART 4 — BUILD A PHOTO COLLECTION" in App.js.
 // ======================================================
 export default function CameraPanel({ onCapture, onClose }) {
-  /*
-  const cameraRef = React.useRef(null);
+    const cameraRef = React.useRef(null);
   const [permission, requestPermission] = useCameraPermissions();
   const [cameraReady, setCameraReady] = React.useState(false);
 
@@ -55,19 +52,7 @@ export default function CameraPanel({ onCapture, onClose }) {
       </View>
     </View>
   );
-  */
 
-  return (
-    <View style={styles.panel}>
-      <Text style={styles.message}>The live camera preview is enabled in Part 3.</Text>
-      <Pressable accessibilityRole="button" onPress={() => onCapture(null)} style={styles.button}>
-        <Text style={styles.buttonText}>Capture photo</Text>
-      </Pressable>
-      <Pressable accessibilityRole="button" onPress={onClose} style={styles.close}>
-        <Text style={styles.closeText}>Close</Text>
-      </Pressable>
-    </View>
-  );
 }
 
 const styles = StyleSheet.create({
