@@ -78,6 +78,11 @@ test('captured photos can be rotated, reset, and saved to Photos', async () => {
   await waitFor(() => expect(rotatePhoto).toHaveBeenCalledWith('file:///captured.jpg'));
   expect(screen.getByLabelText('Selected photo preview').props.source.uri).toBe('file:///rotated.jpg');
 
+  rotatePhoto.mockResolvedValueOnce({ uri: 'file:///rotated-twice.jpg' });
+  await fireEvent.press(screen.getByRole('button', { name: 'Rotate 90°' }));
+  await waitFor(() => expect(rotatePhoto).toHaveBeenLastCalledWith('file:///rotated.jpg'));
+  expect(screen.getByLabelText('Selected photo preview').props.source.uri).toBe('file:///rotated-twice.jpg');
+
   await fireEvent.press(screen.getByRole('button', { name: 'Reset' }));
   expect(screen.getByLabelText('Selected photo preview').props.source.uri).toBe('file:///captured.jpg');
   await fireEvent.press(screen.getByRole('button', { name: 'Save to Photos' }));
