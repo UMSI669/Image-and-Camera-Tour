@@ -9,21 +9,21 @@
 // ======================================================
 /** @returns {Promise<{uri: string, fileName: string, destination: 'download'}>} */
 export async function savePhoto(uri) {
-  /*
-  if (typeof document === 'undefined' || !document.body) {
-    throw new Error('This browser cannot download the photo from this screen.');
+  if (typeof document === "undefined" || !document.body) {
+    throw new Error("This browser cannot download the photo from this screen.");
   }
 
-  const fileName = 'photo-lab.jpg';
-  const link = document.createElement('a');
+  const fileName = "photo-lab.jpg";
+  const link = document.createElement("a");
   link.href = uri;
   link.download = fileName;
-  link.style.display = 'none';
+  link.style.display = "none";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 
-  return { uri, fileName, destination: 'download' };
-  */
-  throw new Error('PART 6 is not complete: download a photo copy in the browser.');
+  return { uri, fileName, destination: "download" };
+  throw new Error(
+    "PART 6 is not complete: download a photo copy in the browser.",
+  );
 }
